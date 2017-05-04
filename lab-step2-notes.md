@@ -1,5 +1,7 @@
 # Lab Step 2
 
+![](refactor2.png)
+
 Refactor API into a Docker container
 
 * Web Service already refactored to container 
