@@ -1,5 +1,8 @@
 # Lab Step 0
 
+<img src="refactor0.png" alt="Giant Godzilla Creature" style="width: 49px; height: 78px;"/>
+
+
 Starting and testing the Monolithic Application
 
 * Web Service running in the VM
