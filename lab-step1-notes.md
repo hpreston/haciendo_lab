@@ -1,5 +1,7 @@
 # Lab Step 1
 
+![](refactor1.png)
+
 Refactor Web into a Docker container
 
 * API Service continues to run in VM
