@@ -1,6 +1,8 @@
 # Lab Step 1
 
-![](refactor1.png)
+![Lab 1][3]
+
+[3]: refactor1.png "Move Web layer to Docker"
 
 Refactor Web into a Docker container
 
