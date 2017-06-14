@@ -1,5 +1,11 @@
 # Lab Step 0
 
+![VM Stack][2]
+
+[2]: refactor0.png "the Monolithic App Stack"
+
+
+
 Starting and testing the Monolithic Application
 
 * Web Service running in the VM

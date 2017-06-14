@@ -1,5 +1,7 @@
 # Lab Step 3
 
+![](refactor3.png)
+
 Refactor SMS into a Docker container
 
 * Web Service already refactored to container
