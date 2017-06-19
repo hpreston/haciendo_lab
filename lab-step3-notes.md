@@ -211,7 +211,7 @@ Refactor SMS into a Docker container
     ```
     docker run -it \
       --env SMS_SERVER=http://<YOUR IP ADDRESS>:15001 \
-      --env YANDEX_KEY="YOUR_KEY"
+      --env YANDEX_KEY="YOUR_KEY" \
       -p 15000:5000 \
       haciendo_api 
     ```
