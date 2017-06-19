@@ -22,8 +22,9 @@ Refactor Web into a Docker container
 1. Don't map the Web Port
     * Delete/Comment ~line 26
     
-        ```
-        config.vm.network "forwarded_port", guest: 5080, host: 15080
+        ```diff
+        - config.vm.network "forwarded_port", guest: 5080, host: 15080
+        + #config.vm.network "forwarded_port", guest: 5080, host: 15080
         ```
 
 1. Don't start the Web Service
