@@ -32,15 +32,18 @@ Refactor Web into a Docker container
         
         ```bash
         # Start the Web Service
-        cd /vagrant/web
-        nohup python haciendo_web.py -p 5080 -a http://localhost:5000/api/score > web_log.log 2>&1 &        
+        - cd /vagrant/web
+        - nohup python haciendo_web.py -p 5080 -a http://localhost:5000/api/score > web_log.log 2>&1 & 
+        + #cd /vagrant/web
+        + #nohup python haciendo_web.py -p 5080 -a http://localhost:5000/api/score > web_log.log 2>&1 &       
         ```
         
 1. Update comments/docs at end
     * Delete/Comment ~line 130
     
-        ```bash
-        echo "Web running on http://localhost:15080 "
+        ```diff
+        - echo "Web running on http://localhost:15080 "
+        + #- echo "Web running on http://localhost:15080 "
         ```
 
 1. Start new VM with just Web and SMS running
