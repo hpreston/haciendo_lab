@@ -203,13 +203,19 @@ Refactor SMS into a Docker container
     ```bash
     curl <YOUR IP ADDRESS>:15001/hello/<YOUR PHONE NUMBER>  
     ```
-        
+            
 1. Run API container in interactive mode to view the startup and logs
     * Insert your workstation IP address into the command below
+    * Insert your Yandex Key into the command below
 
     ```
-    docker run -it --env SMS_SERVER=http://<YOUR IP ADDRESS>:15001 -p 15000:5000 haciendo_api 
+    docker run -it \
+      --env SMS_SERVER=http://<YOUR IP ADDRESS>:15001 \
+      --env YANDEX_KEY="YOUR_KEY"
+      -p 15000:5000 \
+      haciendo_api 
     ```
+    
 
 1.  Test the containerized API Service
 

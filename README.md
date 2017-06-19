@@ -35,7 +35,7 @@ After starting the application, it will be available at [http://localhost:15080]
 
 In the `api\` directory you will find the API layer for the application.  It is written in Python and leverages Flask and Flask_Restful to create a REST API layer for the application.  
 
-The API Service uses the free translation API provided by [transltr.org](http://www.transltr.org) to convert English -> Spanish.
+The API Service uses the free translation API provided by [Yandex](http://translate.yandex.com) to convert English -> Spanish.  This service, while free, does require an API key to use.  See the Pre-Reqs for setting up an account.  
 
 It is designed to run with Python 3.5, though may run in other versions of Python.  For convenience, a `requirements.txt` file is included in the application directory.  
 

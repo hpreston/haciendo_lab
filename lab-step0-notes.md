@@ -41,6 +41,15 @@ cp Vagrantfile.sample Vagrantfile
     nohup python haciendo_sms.py -p 5001 -t TROPO_USER -w TROPO_PASS --tropoprefix 1419 --tropourl ${SMS_NGROK_ADDRESS} > sms_log.log 2>&1 &
 ```
 
+* Open Vagrantfile and add your Yandex Key to the configuration to start the API Service.  Around line 112 in the Vagrantfile
+    * **NOTE: DO NOT ADD THEM TO `Vagrantfile.sample`**
+
+```
+    # Set the Yandex Key
+    # *** Update the following line with your Yandex Key
+    YANDEX_KEY="YOUR_KEY"
+```   
+
 * Configure Vagrant to install Virtual Box Additions at boot.  This is needed to keep the application directory synced between your local workstation and the VM that is running the application.  
 
 ```bash

@@ -8,6 +8,10 @@ To complete the Haciendo Lab you will need to have the following accounts, softw
 * [Docker Hub](https://hub.docker.com) - You will need a free account with Docker Hub.
 * [Cisco Tropo](https://tropo.com) - You will need a free account with Tropo.  
   * Your account needs to be enabled for **sending** SMS Messages.  You can request this by sending an email to [support@tropo.com](mailto:support@tropo.com).  This can take 1-2 business days so be sure to send this email in advance of completing the lab.  
+* [Yandex Translate API](https://api.yandex.com/translate/) - You will need an account and free API key for the Yandex Service
+    * Go to [https://api.yandex.com/translate/](https://api.yandex.com/translate/) and click to get a "Free API Key".  
+    * Sign-up and copy your key to a text file to keep handy
+    * Keys can be found after sign-up at [https://tech.yandex.com/keys/](https://tech.yandex.com/keys/)
 
 ## Software Installed on Workstation 
 

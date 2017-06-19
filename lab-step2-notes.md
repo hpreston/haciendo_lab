@@ -48,7 +48,7 @@ Refactor API into a Docker container
         ```bash
         # Start the API Service
         cd /vagrant/api
-        nohup python haciendo_api.py -p 5000 -t http://localhost:5001/score > api_log.log 2>&1 &
+        nohup python haciendo_api.py -p 5000 -t http://localhost:5001/score -y ${YANDEX_KEY} > api_log.log 2>&1 &
         ```
         
 1. Update comments/docs at end
@@ -110,6 +110,7 @@ Refactor API into a Docker container
     # These are default placeholders but should be overridden
     # when running the container
     ENV SMS_SERVER="http://localhost:5001"
+    ENV YANDEX_KEY="YOUR_KEY"
     
     # Copy needed application requirements file into image
     ADD requirements.txt /app
@@ -153,7 +154,7 @@ Refactor API into a Docker container
     ADD haciendo_api.py /app 
     
     # Run the application
-    CMD cd /app && python haciendo_api.py -p 5000 -t ${SMS_SERVER}/score        
+    CMD cd /app && python haciendo_api.py -p 5000 -t ${SMS_SERVER}/score -y ${YANDEX_KEY}         
     ```        
 
 ## Build Docker image
@@ -180,9 +181,14 @@ Refactor API into a Docker container
     
 1. Run API container in interactive mode to view the startup and logs
     * Insert your workstation IP address into the command below
+    * Insert your Yandex Key into the command below
 
     ```
-    docker run -it --env SMS_SERVER=http://<YOUR IP ADDRESS>:15001 -p 15000:5000 haciendo_api 
+    docker run -it \
+      --env SMS_SERVER=http://<YOUR IP ADDRESS>:15001 \
+      --env YANDEX_KEY="YOUR_KEY"
+      -p 15000:5000 \
+      haciendo_api 
     ```
 
 1.  Test the containerized API Service
