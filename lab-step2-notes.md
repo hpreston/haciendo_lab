@@ -43,7 +43,7 @@ Refactor API into a Docker container
         ```
 
 1. Don't start the API Service
-    * Delete/Comment ~line 111
+    * Delete/Comment ~line 115
         
         ```bash
         # Start the API Service
@@ -52,7 +52,7 @@ Refactor API into a Docker container
         ```
         
 1. Update comments/docs at end
-    * Delete/Comment ~line 124
+    * Delete/Comment ~line 131
     
         ```bash
         echo "API running on http://localhost:15000 "
