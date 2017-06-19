@@ -143,6 +143,7 @@ Refactor API into a Docker container
     # These are default placeholders but should be overridden
     # when running the container
     ENV SMS_SERVER="http://localhost:5001"
+    ENV YANDEX_KEY="YOUR_KEY"
     
     # Copy needed application requirements file into image
     ADD requirements.txt /app
