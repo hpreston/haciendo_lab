@@ -20,42 +20,42 @@ Refactor API into a Docker container
 1. Don't map the API Port
     * Delete/Comment ~line 27
     
-        ```
-        config.vm.network "forwarded_port", guest: 5000, host: 15000
+        ```diff
+        - config.vm.network "forwarded_port", guest: 5000, host: 15000
         ```
 
 1. Don't create the Python 3.5 virtual env
 
     * Delete/Comment ~line 88
     
-        ```
-        virtualenv /home/vagrant/venv_haciendo --python=python3.5
+        ```diff
+        - virtualenv /home/vagrant/venv_haciendo --python=python3.5
         ```
 
 1. Don't Prep the Python 3.5 virtual env
 
     * Delete/Comment ~line 106
     
-        ```
+        ```diff
         # Prep the Virtual Env for API and Web
-        source /home/vagrant/venv_haciendo/bin/activate
-        pip install -r /vagrant/requirements.txt        
+        - source /home/vagrant/venv_haciendo/bin/activate
+        - pip install -r /vagrant/requirements.txt        
         ```
 
 1. Don't start the API Service
     * Delete/Comment ~line 115
         
-        ```bash
+        ```diff
         # Start the API Service
-        cd /vagrant/api
-        nohup python haciendo_api.py -p 5000 -t http://localhost:5001/score -y ${YANDEX_KEY} > api_log.log 2>&1 &
+        - cd /vagrant/api
+        - nohup python haciendo_api.py -p 5000 -t http://localhost:5001/score -y ${YANDEX_KEY} > api_log.log 2>&1 &
         ```
         
 1. Update comments/docs at end
     * Delete/Comment ~line 131
     
-        ```bash
-        echo "API running on http://localhost:15000 "
+        ```diff
+        - echo "API running on http://localhost:15000 "
         ```
 
 1. Start new VM with just Web and SMS running
